@@ -17,7 +17,7 @@
       };
   };
 
-  dconf.settings = {
+  dconf.settings = with lib.hm.gvariant; {
     "org/gnome/desktop/interface" = {
       show-battery-percentage = true;
       color-scheme = "prefer-dark";
@@ -38,12 +38,12 @@
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file://./media/background.jpg";
-      picture-uri-dark = "file://./media/background.jpg";
+      picture-uri = "file:///home/javier/nixos/dotfiles/gnome/media/background.jpg";
+      picture-uri-dark = "file:///home/javier/nixos/dotfiles/gnome/media/background.jpg";
     };
 
     "org/gnome/desktop/screensaver" = {
-      picture-uri = "file://./media/background.jpg";
+      picture-uri = "file:///home/javier/nixos/dotfiles/gnome/media/background.jpg";
     };
 
     "org/gnome/shell" = {
