@@ -17,7 +17,7 @@
     in
     {
     
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.vivobook = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 
             ./hosts/vivobook/configuration.nix

@@ -6,7 +6,7 @@
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake ~/nixos/#default";
+      rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles#vivobook";
       update = "nix flake update";
     };
     oh-my-zsh = {
