@@ -129,7 +129,6 @@
     packages = with pkgs; [
       firefox
       # thunderbird
-      git
       gnome.gnome-tweaks
       easyeffects
       inkscape
@@ -170,12 +169,13 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
     neovim
+    git
+    wget
     firefox
     kitty
-    tlp
     zsh
+    tlp
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -78,9 +78,9 @@
   # programs.kitty.theme = "Catppuccin-Mocha";
   # programs.kitty.font = "FiraCode Nerd Font";
   imports = [
-    ./dotfiles/kitty/config.nix
-    ./dotfiles/shell/config.nix
-    ./dotfiles/gnome/config.nix
-    ./dotfiles/git/config.nix
+    ../../home-manager/kitty
+    ../../home-manager/shell
+    ../../home-manager/gnome
+    ../../home-manager/git
   ];
 }

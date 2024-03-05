@@ -4,6 +4,6 @@
   programs.git = {
     enable = true;
     userName  = "Javier Ocaranza";
-    userEmail = "javier.ocaranza@ug.uchile.cl";
+    userEmail = "javier.ocaranza@protonmail.com";
   };
 }

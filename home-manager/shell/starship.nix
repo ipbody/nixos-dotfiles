@@ -1,29 +1,6 @@
 { config, pkgs, lib, ...}:
 
 {
-  programs.zsh = {
-    enable = true;
-    enableAutosuggestions = true;
-    syntaxHighlighting.enable = true;
-    shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake ~/nixos/#default";
-      update = "nix flake update";
-    };
-    oh-my-zsh = {
-      enable = true;
-      plugins = ["git"];
-    };
-    initExtra = "pfetch";
-  };
-
-  # programs.zsh.plugins = [
-  #   {name = "powerlevel10k";
-  #   src = pkgs.zsh-powerlevel10k;
-  #   file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";}
-  # ];
-
-  # programs.zsh.initExtra = ''source ~/.p10k.zsh'';
-
   programs.starship = {
     enable = true;
     settings = {
