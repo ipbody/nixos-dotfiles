@@ -127,9 +127,7 @@
     description = "javier";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
       # thunderbird
-      gnome.gnome-tweaks
       easyeffects
       inkscape
       gimp
