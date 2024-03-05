@@ -10,7 +10,8 @@
       ./hardware-configuration.nix
       # Home-Manager
       inputs.home-manager.nixosModules.default
-      ../../modules/system/tlp.nix
+      ../../modules/system/tlp
+      ../../modules/system/syncthing
     ];
 
   # Bootloader.
