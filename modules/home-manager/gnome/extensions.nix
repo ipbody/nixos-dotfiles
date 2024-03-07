@@ -11,6 +11,7 @@
         "dash-to-dock@micxgx.gmail.com"
         "just-perfection-desktop@just-perfection"
         "blur-my-shell@aunetx"
+        "caffeine@patapon.info"
       ];
     };
     
@@ -53,5 +54,6 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.just-perfection
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.caffeine
   ];
 }
