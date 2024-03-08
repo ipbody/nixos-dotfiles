@@ -82,5 +82,6 @@
     ../../modules/home-manager/shell
     ../../modules/home-manager/gnome
     ../../modules/home-manager/git
+    ../../modules/home-manager/hyprland
   ];
 }
