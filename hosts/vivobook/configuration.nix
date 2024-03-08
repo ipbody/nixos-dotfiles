@@ -12,6 +12,8 @@
       inputs.home-manager.nixosModules.default
       ../../modules/system/tlp
       ../../modules/system/syncthing
+      # WM
+      ../../modules/system/hyprland
     ];
 
   # Bootloader.
