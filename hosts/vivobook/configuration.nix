@@ -151,6 +151,7 @@
     firefox
     kitty
     zsh
+    wev
     # tlp
   ];
 
