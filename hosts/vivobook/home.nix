@@ -83,5 +83,6 @@
     ../../modules/home-manager/gnome
     ../../modules/home-manager/git
     ../../modules/home-manager/hyprland
+    ../../modules/home-manager/waybar
   ];
 }

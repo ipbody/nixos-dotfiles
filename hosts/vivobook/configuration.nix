@@ -152,6 +152,8 @@
     kitty
     zsh
     wev
+    psmisc
+    btop
     # tlp
   ];
 
