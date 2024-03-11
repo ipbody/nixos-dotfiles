@@ -5,9 +5,8 @@
   font-family: "FiraCode Nerd Font";
   font-size: .9rem;
   border-radius: 1rem;
-  transition-property: background-color;
+  /* transition-property: background-color; */
   transition-duration: 0.5s;
-  background-color: shade(@base, 0.9);
 }
 
 @keyframes blink_red {
@@ -25,17 +24,18 @@
   animation-direction: alternate;
 }
 
-#mode, #clock, #memory, #temperature, #cpu, #custom-weather,
+#mode, #workspaces, #clock, #memory, #temperature, #cpu, #custom-weather,
 #mpd, #idle_inhibitor, #backlight, #pulseaudio, #network, 
 #battery, #custom-powermenu, #custom-cava-internal,
 #custom-launcher, #tray, #disk, #custom-pacman, #custom-scratchpad-indicator {
+  background-color: shade(@base, 0.9);
   padding-left: .6rem;
   padding-right: .6rem;
 }
 
 /* Bar */
 window#waybar {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 window > box {
@@ -46,7 +46,7 @@ window > box {
 
 
 /* Workspaces */
-#workspaces:hover {
+/* #workspaces:hover {
   background-color: @green;
 }
 
@@ -56,7 +56,6 @@ window > box {
   padding-top: .1rem;
   padding-bottom: .1rem;
   color: @red;
-  /* border: .2px solid transparent; */
   background: transparent;
 }
 
@@ -65,8 +64,42 @@ window > box {
 }
 
 #workspaces button:hover {
-  /* border: .2px solid transparent; */
   color: @rosewater;
+} */
+
+#workspaces button {
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 9px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 0px;
+  color: @text;
+  animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+  background: @subtext0;
+  background-color: @subtext0;
+  color: @surface0;
+  margin-left: 3px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-right: 3px;
+  animation: ws_active 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+  background: @pink;
+  background-color: @pink;
+  color: @surface0;
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 /* Tooltip */
@@ -112,10 +145,6 @@ tooltip label {
 }
 
 /* Extra */
-#custom-cava-internal{
-  color: @peach;
-  padding-right: 1rem;
-}
 #custom-launcher {
   color: @yellow;
 }
