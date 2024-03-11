@@ -78,6 +78,7 @@
 
   # Enable bluetooth
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -103,7 +104,7 @@
   users.users.javier = {
     isNormalUser = true;
     description = "javier";
-    extraGroups = [ "networkmanager" "wheel" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "video"];
     packages = with pkgs; [
       # thunderbird
       easyeffects
