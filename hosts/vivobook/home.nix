@@ -85,5 +85,6 @@
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/waybar
     ../../modules/home-manager/dunst
+    ../../modules/home-manager/rofi
   ];
 }
