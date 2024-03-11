@@ -98,7 +98,7 @@
       "default": ["", "", ""]
   },
     "scroll-step": 1,
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click": "pavucontrol",
     "tooltip": false
   },
 
@@ -138,16 +138,16 @@
   //   "tooltip": true,
   // },
   "clock": {
-    "on-click": "~/.config/waybar/to_latte.sh &",
-    "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
-    "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
+    // "on-click": "~/.config/waybar/to_latte.sh &",
+    // "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
+    // "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
     "interval": 1,
     "format": "{:%I:%M %p  %A %b %d}",
     "tooltip": true,
     "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
   },
   "memory": {
-    "on-click": "kitty btm",
+    "on-click": "kitty btop",
     "interval": 1,
     "format": "󰍛 {percentage}%",
     "states": {

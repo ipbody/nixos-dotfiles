@@ -126,6 +126,8 @@
       starship
       neofetch
       pfetch
+      zoom-us
+      pavucontrol
     ];
     shell = pkgs.zsh;
   };
