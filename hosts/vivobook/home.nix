@@ -84,5 +84,6 @@
     ../../modules/home-manager/git
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/waybar
+    ../../modules/home-manager/dunst
   ];
 }

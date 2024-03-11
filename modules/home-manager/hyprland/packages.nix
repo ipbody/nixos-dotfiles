@@ -10,5 +10,6 @@
     light
     networkmanagerapplet
     blueman
+    libnotify
   ];
 }
