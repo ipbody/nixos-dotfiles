@@ -103,7 +103,7 @@
   users.users.javier = {
     isNormalUser = true;
     description = "javier";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "input" ];
     packages = with pkgs; [
       # thunderbird
       easyeffects
@@ -155,6 +155,16 @@
     psmisc
     btop
     # tlp
+  ];
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    nerdfonts
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
