@@ -6,5 +6,9 @@
     rofi-wayland
     waybar
     dunst
+    mpd
+    light
+    networkmanagerapplet
+    blueman
   ];
 }
