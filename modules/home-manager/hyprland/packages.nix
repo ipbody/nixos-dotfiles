@@ -9,11 +9,11 @@
     mpd
     light
     networkmanagerapplet
-    blueman
     libnotify
     xdg-desktop-portal-hyprland
     libsForQt5.polkit-kde-agent
     qt6.qtwayland
     libsForQt5.qt5.qtwayland
+    swww
   ];
 }

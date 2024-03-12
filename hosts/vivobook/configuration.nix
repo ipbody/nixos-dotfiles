@@ -157,6 +157,7 @@
     wev
     psmisc
     btop
+    blueman
     # tlp
   ];
 
