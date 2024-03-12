@@ -12,6 +12,7 @@
       inputs.home-manager.nixosModules.default
       ../../modules/system/tlp
       ../../modules/system/syncthing
+      ../../modules/system/printers
       # WM
       ../../modules/system/hyprland
     ];
@@ -163,6 +164,7 @@
   ];
 
   fonts.packages = with pkgs; [
+    corefonts
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
@@ -170,6 +172,8 @@
     fira-code
     fira-code-symbols
     nerdfonts
+    roboto
+    roboto-mono
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
