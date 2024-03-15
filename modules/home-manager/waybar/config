@@ -12,7 +12,6 @@
     "idle_inhibitor",
   ],
   "modules-center": [
-    "custom/weather",
     "clock",
   ],
   "modules-right": [
@@ -20,38 +19,15 @@
     "disk",
     "memory",
     "cpu",
-    /* "network", */
     "battery",
     "tray",
-    // "custom/recording",
-    "custom/powermenu",
+    "custom/powermenu"
   ],
   "custom/launcher": {
     "format": "",
-    "on-click": "rofi -show drun"
+    "on-click": "rofi -show drun -theme .config/rofi/launchers/type-1/style-5.rasi"
   },
-  
-  // "hyprland/workspaces": {
-  //   "disable-scroll": true,
-  //   /* "all-outputs": true, */
-  //   "active-only": false,
-  //   "format": "{icon}",
-  //   "format-icons": {
-  //     // "1": "一",
-  //     // "2": "二",
-  //     // "3": "三",
-  //     // "4": "四",
-  //     // "5": "五",
-  //     // "6": "六",
-  //     // "7": "七",
-  //     // "8": "八",
-  //     // "9": "九",
-  //     // "10": "十",
-  //     "urgent": "",
-  //     "focused": "",
-  //     "default": ""
-  //   }
-  // },
+
   "hyprland/workspaces": {
     "disable-scroll": true,
     "rotate": 0,
@@ -65,8 +41,8 @@
     "format": "{icon}",
     "rotate": 0,
     "format-icons": {
-        "activated": "󰥔",
-        "deactivated": ""
+        "activated": "󰥔 ",
+        "deactivated": " "
     }
   },
   "backlight": {
@@ -115,36 +91,12 @@
     "format-alt": "{time} {icon}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
 },
-  // "battery": {
-  //   "interval": 10,
-  //   "states": {
-  //     "warning": 20,
-  //     "critical": 10
-  //   },
-  //   "format": "{icon} {capacity}%",
-  //   "format-icons": [
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     ""
-  //   ],
-  //   "format-full": "{icon} {capacity}%",
-  //   "format-charging": " {capacity}%",
-  //   "tooltip": true,
-  // },
   "clock": {
-    // "on-click": "~/.config/waybar/to_latte.sh &",
-    // "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
-    // "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
     "interval": 1,
-    "format": "{:%I:%M %p  %A %b %d}",
+    "format": "{:%H:%M  %A %b %d}",
     "tooltip": true,
-    "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
+    "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>",
+    "on-scroll": 1,
   },
   "memory": {
     "on-click": "kitty btop",
@@ -158,30 +110,8 @@
     "interval": 1,
     "format": "󰻠 {usage}%"
   },
-  "mpd": {
-    "max-length": 25,
-    "format": "<span foreground='#bb9af7'></span> {title}",
-    "format-paused": " {title}",
-    "format-stopped": "<span foreground='#bb9af7'></span>",
-    "format-disconnected": "",
-    "on-click": "mpc --quiet toggle",
-    "on-click-right": "mpc ls | mpc add",
-    "on-click-middle": "kitty ncmpcpp",
-    "on-scroll-up": "mpc --quiet prev",
-    "on-scroll-down": "mpc --quiet next",
-    "smooth-scrolling-threshold": 5,
-    "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
-  },
-  "network": {
-    "interval": 1,
-    "format-wifi": "說 {essid}",
-    "format-ethernet": "  {ifname} ({ipaddr})",
-    "format-linked": "說 {essid} (No IP)",
-    "format-disconnected": "說 Disconnected",
-    "tooltip": false
-  },
   "temperature": {
-    // "hwmon-path": "/sys/class/hwmon/hwmon4/temp2_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
     "tooltip": false,
     "format": " {temperatureC}°C"
@@ -191,15 +121,21 @@
     "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh",
     "tooltip": false
   },
+  // "custom/playerctl": {
+  //   "format": "{icon} {title}",
+  //   "format-icons": {
+  //     "play": "",
+  //     "pause": "",
+  //     "stop": "",
+  //     "next": "",
+  //     "previous": ""
+  //   },
+  //   "tooltip": true,
+  //   "tooltip-format": "{title} - {artist} ({album})\n{status} {position}/{duration}",
+  //   "exec": "playerctl metadata --format '{"title": "{{xesam:title}}", "duration": "{{mpris:length}}", "album": "{{xesam:album}}"}'"
+  // },
   "tray": {
     "icon-size": 15,
     "spacing": 5
-  },
-  "custom/weather": {
-    "format": "{}",
-    "tooltip": true,
-    "interval": 3600,
-    "exec": "~/.config/waybar/wabar-wttr.py",
-    "return-type": "json"
   },
 }
