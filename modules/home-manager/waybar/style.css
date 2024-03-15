@@ -28,14 +28,16 @@
 #mpd, #idle_inhibitor, #backlight, #pulseaudio, #network, 
 #battery, #custom-powermenu, #custom-cava-internal,
 #custom-launcher, #tray, #disk, #custom-pacman, #custom-scratchpad-indicator {
-  background-color: shade(@base, 0.9);
+  background-color: @base;
+  color: @base;
   padding-left: .6rem;
   padding-right: .6rem;
 }
 
 /* Bar */
 window#waybar {
-  background-color: rgba(0, 0, 0, 0);
+  /* background-color: rgba(0, 0, 0, 0); */
+  background-color: @base;
 }
 
 window > box {
@@ -113,22 +115,34 @@ tooltip label {
 
 /* battery */
 #battery {
-  color: @mauve;
+  /* color: @mauve; */
+  background-color: @mauve;
+  color: @base;
 }
 #battery.full {
-  color: @green;
+  /* color: @green; */
+  background-color: @green;
+  color: @base;
 }
 #battery.charging{
-  color: @teal;
+  /* color: @teal; */
+  background-color: @teal;
+  color: @base;
 }
 #battery.discharging {
-  color: @peach;
+  /* color: @peach; */
+  background-color: @peach;
+  color: @base;
 }
 #battery.critical:not(.charging) {
-  color: @pink;
+  /* color: @pink; */
+  background-color: @pink;
+  color: @base;
 }
 #custom-powermenu {
-  color: @red;
+  /* color: @red; */
+  background-color: @red;
+  color: @base;
 }
 
 /* mpd */
@@ -146,44 +160,47 @@ tooltip label {
 
 /* Extra */
 #custom-launcher {
-  color: @yellow;
+  background-color: @yellow;
 }
 #memory {
-  color: @peach;
+  background-color: @peach;
 }
 #cpu {
-  color: @blue;
+  background-color: @blue;
 }
 #clock {
-  color: @rosewater;
+  background-color: @rosewater;
 }
 #idle_inhibitor {
-  color: @green;
+  background-color: @green;
 }
 #temperature {
-  color: @sapphire;
+  background-color: @sapphire;
 }
 #backlight {
-  color: @green;
+  background-color: @green;
 }
 #pulseaudio {
-  color: @mauve;  /* not active */
+  background-color: @mauve;  /* not active */
 }
 #network {
-  color: @pink; /* not active */
+  background-color: @pink; /* not active */
 }
 #network.disconnected {
-  color: @foreground;  /* not active */
+  background-color: @foreground;  /* not active */
 }
 #disk {
-  color: @maroon;
+  background-color: @maroon;
 }
 #custom-pacman{
-  color: @sky;
+  background-color: @sky;
 }
 #custom-scratchpad-indicator {
-  color: @yellow
+  background-color: @yellow
 }
 #custom-weather {
-  color: @red;
+  background-color: @red;
+}
+#tray {
+  background-color: @surface1;
 }
