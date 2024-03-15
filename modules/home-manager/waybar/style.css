@@ -158,6 +158,16 @@ tooltip label {
   color: @lavender;
 }
 
+#mpris.paused {
+  color: @pink;
+}
+#mpris.stopped {
+  color: @rosewater;
+  /* background: transparent; */
+}
+#mpris {
+  color: @lavender;
+}
 /* Extra */
 #custom-launcher {
   background-color: @yellow;
