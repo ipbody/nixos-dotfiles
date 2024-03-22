@@ -39,6 +39,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.networkmanager.dns = "systemd-resolved";
+  services.resolved.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Santiago";
@@ -76,6 +78,9 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  
+  # Enable tailscale
+  services.tailscale.enable = true;
 
   # Enable bluetooth
   hardware.bluetooth.enable = true;
@@ -98,6 +103,7 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -160,6 +166,7 @@
     psmisc
     btop
     blueman
+    tailscale
     # tlp
   ];
 
@@ -174,6 +181,7 @@
     nerdfonts
     roboto
     roboto-mono
+    lmodern
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
