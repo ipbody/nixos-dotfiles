@@ -15,7 +15,7 @@ dir="$HOME/.config/rofi/powermenu/type-2"
 theme='style-3'
 
 # CMDs
-uptime="`uptime -p | sed -e 's/up //g'`"
+uptime="`uptime | sed -e 's/up //g'`"
 host=`hostname`
 
 # Options
@@ -26,13 +26,13 @@ host=`hostname`
 # logout=''
 # yes=''
 # no=''
-shutdown=' '
-reboot='󰑓 '
-lock=' '
-suspend='󰒲 '
-logout=' '
-yes=' '
-no=' '
+shutdown=''
+reboot='󰑓'
+lock=''
+suspend='󰒲'
+logout=''
+yes=''
+no=''
 
 # Rofi CMD
 rofi_cmd() {
@@ -78,15 +78,7 @@ run_cmd() {
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
-			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
-				openbox --exit
-			elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
-				bspc quit
-			elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
-				i3-msg exit
-			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
-				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
-			fi
+			hyprctl dispatch exit  
 		fi
 	else
 		exit 0
@@ -103,11 +95,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
-		fi
+		loginctl lock-session
         ;;
     $suspend)
 		run_cmd --suspend
