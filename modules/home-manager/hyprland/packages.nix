@@ -7,7 +7,7 @@
     waybar
     dunst
     mpd
-    light
+    brightnessctl
     networkmanagerapplet
     libnotify
     xdg-desktop-portal-hyprland
