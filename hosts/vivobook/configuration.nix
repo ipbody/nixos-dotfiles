@@ -26,7 +26,7 @@
   nix.gc = {
   automatic = true;
   dates = "weekly";
-  options = "--delete-older-than 7d";
+  options = "-d --delete-older-than 7d";
   };
   
   nix.settings.experimental-features = [ "nix-command" "flakes"];
@@ -65,7 +65,7 @@
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
