@@ -4,30 +4,24 @@
 * {
   font-family: "FiraCode Nerd Font";
   font-size: .9rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   /* transition-property: background-color; */
-  /* transition-duration: 0.5s; */
+  transition-duration: 0.5s;
 }
 
-/* @keyframes blink_red {
+@keyframes blink_red {
   to {
     background-color: @red;
     color: @base;
-  } */
-/* } */
-/* 
+  }
+}
+
 .warning, .critical, .urgent {
   animation-name: blink_red;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-} */
-
-/* Bar */
-window#waybar {
-  background-color: rgba(0, 0, 0, 0);
-  /* background-color: @base; */
 }
 
 #mode, #workspaces, #clock, #memory, #temperature, #cpu, #custom-weather,
@@ -36,23 +30,21 @@ window#waybar {
 #custom-launcher, #tray, #disk, #custom-pacman, #custom-scratchpad-indicator {
   background-color: @base;
   color: @base;
-  padding-left: .1rem;
-  padding-right: .1rem;
-  border-left: .6rem solid @base;
-  border-right: .6rem solid @base;
-  margin-top: 5px;
+  padding-left: .6rem;
+  padding-right: .6rem;
 }
 
-#custom-launcher, #idle_inhibitor {
-  padding-right: .4rem;
+/* Bar */
+window#waybar {
+  /* background-color: rgba(0, 0, 0, 0); */
+  background-color: @base;
 }
 
-
-/* window > box {
+window > box {
   background-color: transparent;
   margin: .3rem;
   margin-bottom: 0;
-} */
+}
 
 
 /* Workspaces */
@@ -89,7 +81,7 @@ window#waybar {
   padding-right: 3px;
   margin-right: 0px;
   color: @text;
-  /* animation: ws_normal 20s ease-in-out 1; */
+  animation: ws_normal 20s ease-in-out 1;
 }
 
 #workspaces button.active {
@@ -100,16 +92,16 @@ window#waybar {
   padding-left: 12px;
   padding-right: 12px;
   margin-right: 3px;
-  /* animation: ws_active 20s ease-in-out 1;
-  transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682); */
+  animation: ws_active 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button:hover {
   background: @pink;
   background-color: @pink;
   color: @surface0;
-  /* animation: ws_hover 20s ease-in-out 1;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682); */
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 /* Tooltip */
@@ -123,34 +115,47 @@ tooltip label {
 
 /* battery */
 #battery {
-  color: @mauve;
-  /* background-color: @mauve;
-  color: @base; */
+  /* color: @mauve; */
+  background-color: @mauve;
+  color: @base;
 }
 #battery.full {
-  color: @green;
-  /* background-color: @green;
-  color: @base; */
+  /* color: @green; */
+  background-color: @green;
+  color: @base;
 }
 #battery.charging{
-  color: @teal;
-  /* background-color: @teal; */
-  /* color: @base; */
+  /* color: @teal; */
+  background-color: @teal;
+  color: @base;
 }
 #battery.discharging {
-  color: @peach;
-  /* background-color: @peach; */
-  /* color: @base; */
+  /* color: @peach; */
+  background-color: @peach;
+  color: @base;
 }
 #battery.critical:not(.charging) {
-  color: @pink;
-  /* background-color: @pink;
-  color: @base; */
+  /* color: @pink; */
+  background-color: @pink;
+  color: @base;
 }
 #custom-powermenu {
-  color: @red;
-  /* background-color: @red;
-  color: @base; */
+  /* color: @red; */
+  background-color: @red;
+  color: @base;
+}
+
+/* mpd */
+#mpd.paused {
+  color: @pink;
+  font-style: italic;
+}
+#mpd.stopped {
+  color: @rosewater;
+  /* background: transparent; */
+}
+#mpd {
+  color: @lavender;
 }
 
 #mpris.paused {
@@ -165,32 +170,47 @@ tooltip label {
 }
 /* Extra */
 #custom-launcher {
-  color: @yellow;
+  background-color: @yellow;
 }
 #memory {
-  color: @peach;
+  background-color: @peach;
 }
 #cpu {
-  color: @blue;
+  background-color: @blue;
 }
 #clock {
-  color: @rosewater;
+  background-color: @rosewater;
 }
 #idle_inhibitor {
-  color: @green;
+  background-color: @green;
 }
 #temperature {
-  color: @sapphire;
+  background-color: @sapphire;
 }
 #backlight {
-  color: @green;
+  background-color: @green;
 }
 #pulseaudio {
-  color: @mauve;  /* not active */
+  background-color: @mauve;  /* not active */
+}
+#network {
+  background-color: @pink; /* not active */
+}
+#network.disconnected {
+  background-color: @foreground;  /* not active */
 }
 #disk {
-  color: @maroon;
+  background-color: @maroon;
+}
+#custom-pacman{
+  background-color: @sky;
+}
+#custom-scratchpad-indicator {
+  background-color: @yellow
+}
+#custom-weather {
+  background-color: @red;
 }
 #tray {
-  background-color: @base;
+  background-color: @surface1;
 }
