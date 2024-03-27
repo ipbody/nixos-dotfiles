@@ -16,6 +16,8 @@
         variant = "mocha";
       };
     };
+    cursorTheme.name = "volantes_cursors";
+    font.name = "MesloLG Nerd Font";
   };
 
   # Now symlink the `~/.config/gtk-4.0/` folder declaratively:

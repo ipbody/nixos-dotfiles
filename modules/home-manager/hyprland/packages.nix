@@ -16,7 +16,7 @@
     libsForQt5.qt5.qtwayland
     # swww
     playerctl
-    apple-cursor
+    volantes-cursors
     hyprpaper
     hyprlock
     hypridle
