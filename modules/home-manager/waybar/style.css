@@ -43,8 +43,16 @@ window#waybar {
   margin-top: 5px;
 }
 
-#custom-launcher, #idle_inhibitor {
+#custom-launcher, #custom-powermenu, #idle_inhibitor {
   padding-right: .4rem;
+}
+
+#custom-launcher {
+  margin-left: 5px;
+}
+
+#custom-powermenu {
+  margin-right: 5px;
 }
 
 
