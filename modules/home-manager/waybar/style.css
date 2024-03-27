@@ -3,7 +3,8 @@
 /* Global */
 * {
   font-family: "FiraCode Nerd Font";
-  font-size: .9rem;
+  /* font-family: "MesloLG Nerd Font"; */
+  font-size: 1rem;
   border-radius: 0.5rem;
   /* transition-property: background-color; */
   /* transition-duration: 0.5s; */
