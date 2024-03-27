@@ -21,5 +21,6 @@
     hyprlock
     hypridle
     xfce.thunar
+    evince
   ];
 }
