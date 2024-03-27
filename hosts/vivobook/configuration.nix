@@ -118,6 +118,7 @@
       easyeffects
       inkscape
       gimp
+      feh
       celluloid
       onlyoffice-bin
       qbittorrent
