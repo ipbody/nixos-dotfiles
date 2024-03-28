@@ -86,5 +86,6 @@
     ../../modules/home-manager/waybar
     ../../modules/home-manager/dunst
     ../../modules/home-manager/rofi
+    ../../modules/home-manager/yazi
   ];
 }
