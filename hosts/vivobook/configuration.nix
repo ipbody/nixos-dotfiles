@@ -115,6 +115,11 @@
     extraGroups = [ "networkmanager" "wheel" "input" "video"];
     packages = with pkgs; [
       # thunderbird
+      xfce.thunar
+      gnome.gvfs
+      xfce.thunar-archive-plugin
+      gnome.file-roller
+      evince
       easyeffects
       inkscape
       gimp
@@ -158,6 +163,9 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     neovim
+    du-dust
+    zip
+    rar
     git
     wget
     firefox
