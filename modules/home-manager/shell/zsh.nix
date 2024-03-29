@@ -13,6 +13,17 @@
       enable = true;
       plugins = ["git"];
     };
-    initExtra = "pfetch";
+    initExtra = ''pfetch
+    function yy() {
+      local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+      yazi "$@" --cwd-file="$tmp"
+      if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        cd -- "$cwd"
+      fi
+      rm -f -- "$tmp"
+    }'';
+    envExtra = ''
+      export EDITOR=nvim
+      '';
   };
 }
