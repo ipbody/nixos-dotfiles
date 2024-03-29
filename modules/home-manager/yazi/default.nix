@@ -13,6 +13,7 @@
     zoxide
     ouch
     ffmpegthumbnailer
+    xdragon
   ];
   programs.zoxide = {
     enable = true;
