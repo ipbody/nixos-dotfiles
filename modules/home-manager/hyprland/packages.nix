@@ -20,5 +20,6 @@
     hyprpaper
     hyprlock
     hypridle
+    wl-clipboard
   ];
 }

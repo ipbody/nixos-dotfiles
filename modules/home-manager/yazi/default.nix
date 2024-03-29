@@ -12,6 +12,7 @@
     fzf
     zoxide
     ouch
+    ffmpegthumbnailer
   ];
   programs.zoxide = {
     enable = true;
