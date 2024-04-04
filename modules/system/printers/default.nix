@@ -10,6 +10,8 @@
       model = "drv:///sample.drv/generic.ppd";
       ppdOptions = {
         PageSize = "Letter";
+        Duplex = "DuplexNoTumble";
+        Option1 =  "True";
       };
     }
   ];
