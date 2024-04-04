@@ -30,6 +30,9 @@
   };
   
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+  
+  # Overlays
+  nixpkgs.overlays = [inputs.nix-matlab.overlay];
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

@@ -9,8 +9,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
-
+    nix-matlab = {
+      url = "gitlab:doronbehar/nix-matlab";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -19,7 +25,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-    
       nixosConfigurations.vivobook = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 
@@ -27,6 +32,5 @@
             inputs.home-manager.nixosModules.default
           ];
         };
-
     };
 }
