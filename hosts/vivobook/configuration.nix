@@ -31,9 +31,6 @@
   
   nix.settings.experimental-features = [ "nix-command" "flakes"];
   
-  # Overlays
-  nixpkgs.overlays = [inputs.nix-matlab.overlay];
-
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -115,7 +112,7 @@
   users.users.javier = {
     isNormalUser = true;
     description = "javier";
-    extraGroups = [ "networkmanager" "wheel" "input" "video"];
+    extraGroups = [ "networkmanager" "wheel" "input" "video" "docker"];
     packages = with pkgs; [
       # thunderbird
       xfce.thunar
@@ -158,8 +155,21 @@
     };
   };
 
+  # Docker
+  virtualisation.docker = {
+    enable = true;
+    storageDriver = "btrfs";
+    # rootless = {
+    #   enable = true;
+    #   setSocketVariable = true;
+    # };
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Overlays
+  nixpkgs.overlays = [inputs.nix-matlab.overlay];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
