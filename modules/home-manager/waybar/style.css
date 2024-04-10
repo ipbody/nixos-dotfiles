@@ -32,7 +32,7 @@ window#waybar {
 }
 
 #mode, #workspaces, #clock, #memory, #temperature, #cpu, #custom-weather,
-#mpd, #idle_inhibitor, #backlight, #pulseaudio, #network, 
+#mpris, #idle_inhibitor, #backlight, #pulseaudio, #network, 
 #battery, #custom-powermenu, #custom-cava-internal,
 #custom-launcher, #tray, #disk, #custom-pacman, #custom-scratchpad-indicator {
   background-color: @base;
