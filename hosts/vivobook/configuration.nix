@@ -189,6 +189,7 @@
     btop
     blueman
     tailscale
+    matlab
     # tlp
   ];
 
